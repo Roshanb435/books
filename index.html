@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://i.ibb.co/svGy6NC/Screenshot-2024-08-02-141629.png" alt="Book Exchange Network Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="scrollToSection('bestsellers')">Books</a></li>
+                    <li><a href="#" onclick="toggleModal('eventsModal')">Events</a></li>
+                    <li><a href="#" onclick="toggleModal('communityModal')">Community</a></li>
+                    <li><a href="#" onclick="toggleModal('contactModal')">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart" onclick="toggleModal('cartModal')">
+                <i class="fas fa-shopping-cart"></i> <span>₹0.00</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <img src="https://i.ibb.co/W6vh1wY/Screenshot-2024-08-02-140332.png" alt="Hero Image">
+                <h1>A room without books is like a body without a soul</h1>
+                <p>Discover how sharing books can change lives and build communities.</p>
+                <a href="#" class="btn" onclick="showLearnMore()">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <img src="https://i.ibb.co/XCqKntt/Screenshot-2024-08-02-142144.png" alt="Feature 1">
+                    <h2>Shop Sale</h2>
+                    <p>Find amazing deals on a wide variety of books.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://i.ibb.co/pv5JLzQ/Screenshot-2024-08-02-142247.png" alt="Feature 2">
+                    <h2>Latest Products</h2>
+                    <p>Check out the newest additions to our collection.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://i.ibb.co/MVRxt8w/Screenshot-2024-08-02-142113.png" alt="Feature 3">
+                    <h2>Read the Blog</h2>
+                    <p>Get the latest news and reading tips from our blog.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bestsellers Section -->
+        <section class="bestsellers">
+            <div class="container">
+                <h2>Bestsellers</h2>
+                <div class="books">
+                    <div class="column">
+                        <div class="book">
+                            <img src="https://i.ibb.co/j63WSkc/Screenshot-2024-08-02-143919.png" alt="The Book with no name">
+                            <h3>The Book with no name</h3>
+                            <p>₹0.00</p>
+                            <button class="btn" onclick="addToCart('The Book with no name', 0)">Exchange</button>
+                        </div>
+                        <div class="book">
+                            <img src="https://i.ibb.co/dW4sPw7/Screenshot-2024-08-02-144048.png" alt="The Name of the Wind">
+                            <h3>The Name of the Wind</h3>
+                            <p>₹19.99</p>
+                            <button class="btn" onclick="addToCart('The Name of the Wind', 19.99)">Buy Now</button>
+                        </div>
+                        <div class="book">
+                            <img src="https://i.ibb.co/4J7bd71/Screenshot-2024-08-02-144255.png" alt="The Ryle of Zentule">
+                            <h3>The Ryle of Zentule</h3>
+                            <p>₹0.00</p>
+                            <button class="btn" onclick="addToCart('The Ryle of Zentule', 0)">Exchange</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="book">
+                            <img src="https://i.ibb.co/bdf1jG8/Screenshot-2024-08-02-144408.png" alt="The Book of Power">
+                            <h3>The Book of Power</h3>
+                            <p>₹12.99</p>
+                            <button class="btn" onclick="addToCart('The Book of Power', 12.99)">Buy Now</button>
+                        </div>
+                        <div class="book">
+                            <img src="https://i.ibb.co/wddpcgn/Screenshot-2024-08-02-144627.png" alt="Lord Krishna">
+                            <h3>Lord Krishna</h3>
+                            <p>₹0.00</p>
+                            <button class="btn" onclick="addToCart('Lord Krishna', 0)">Exchange</button>
+                        </div>
+                        <div class="book">
+                            <img src="https://i.ibb.co/yNQGPpv/Screenshot-2024-08-02-145401.png" alt="Chanakya Neeti">
+                            <h3>Chanakya Neeti</h3>
+                            <p>₹15.99</p>
+                            <button class="btn" onclick="addToCart('Chanakya Neeti', 15.99)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="book">
+                            <img src="https://i.ibb.co/CwD1pnh/Screenshot-2024-08-02-145633.png" alt="Bhagavad Gita">
+                            <h3>Bhagavad Gita</h3>
+                            <p>₹11.99</p>
+                            <button class="btn" onclick="addToCart('Bhagavad Gita', 11.99)">Buy Now</button>
+                        </div>
+                        <div class="book">
+                            <img src="https://i.ibb.co/FJKYD78/Screenshot-2024-08-02-145846.png" alt="Wings of Fire">
+                            <h3>Wings of Fire</h3>
+                            <p>₹13.99</p>
+                            <button class="btn" onclick="addToCart('Wings of Fire', 13.99)">Buy Now</button>
+                        </div>
+                        <div class="book">
+                            <img src="https://i.ibb.co/m0MhC3t/Screenshot-2024-08-02-153521.png" alt="The Magnificient Shiva">
+                            <h3>The Magnificient Shiva</h3>
+                            <p>₹18.99</p>
+                            <button class="btn" onclick="addToCart('The Magnificient Shiva', 18.99)">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learn More Modal -->
+        <div id="learnMoreModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('learnMoreModal')">&times;</span>
+                <h2>Learn More</h2>
+                <p>Welcome to the Book Exchange Network, your ultimate destination for aesthetic book sharing and trading. Our platform is designed to help you clear out your old books and earn money or share your knowledge with fellow book enthusiasts. Whether you're looking to declutter your collection or find new gems to add to your library, we provide a vibrant community where book lovers can connect and exchange valuable literary treasures. Join us in fostering a culture of reading and sharing, and make the most of your book collection today!</p>
+            </div>
+        </div>
+
+        <!-- Books Modal -->
+        <div id="booksModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('booksModal')">&times;</span>
+                <h2>Books</h2>
+                <p>Explore our extensive collection of books.</p>
+            </div>
+        </div>
+
+        <!-- Events Modal -->
+        <div id="eventsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('eventsModal')">&times;</span>
+                <h2>Events</h2>
+                <p>Check out our upcoming book events and join the fun.</p>
+                <button onclick="toggleModal('loginModal')">Login</button>
+                <button onclick="toggleModal('signupModal')">Sign Up</button>
+            </div>
+        </div>
+
+        <!-- Community Modal -->
+        <div id="communityModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('communityModal')">&times;</span>
+                <h2>Community</h2>
+                <p>Join our community and connect with fellow book enthusiasts.</p>
+                <button onclick="toggleModal('loginModal')">Login</button>
+                <button onclick="toggleModal('signupModal')">Sign Up</button>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('contactModal')">&times;</span>
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Cart Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('cartModal')">&times;</span>
+                <h2>Your Cart</h2>
+                <ul id="cartItems"></ul>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₹0.00</span>
+                </div>
+                <button id="addNewBooksButton" class="btn" onclick="scrollToSection('bestsellers')">Add New Books</button>
+                <div id="removeSection" style="display: none;">
+                    <h3>Remove Book</h3>
+                    <select id="bookSelect">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <button class="btn" onclick="removeFromCart()">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('loginModal')">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('signupModal')">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <label for="contact">Contact:</label>
+                    <input type="tel" id="contact" name="contact" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Book Exchange Network. All rights reserved.</p>
+    </footer>
+</body>
+</html>
